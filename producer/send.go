@@ -33,10 +33,10 @@ func main() {
 
 	body := "Hello World!"
 	err = ch.Publish(
-		"ahihi", // exchange
-		q.Name,  // routing key
-		true,    // mandatory
-		false,   // immediate
+		"",     // exchange
+		q.Name, // routing key
+		false,  // mandatory
+		false,  // immediate
 		amqp.Publishing{
 			ContentType: "text/plain",
 			Body:        []byte(body),
